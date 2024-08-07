@@ -1,0 +1,33 @@
+{rating === 5 ? (
+              <>
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </>
+            ) : rating === 4.5 ? (
+              <>
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStarHalfAlt />
+              </>
+            ) : rating === 3 ? (
+              <>
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </>
+            ) : (
+              ""
+            )}
+
+            {modelName ? (
+                <>
+                  <h2>Model Name: {modelName}</h2>
+                </>
+              ) : (
+                ""
+              )}
