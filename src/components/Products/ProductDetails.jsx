@@ -9,7 +9,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { TbReplace } from "react-icons/tb";
 import { GoShieldCheck, GoTrophy } from "react-icons/go";
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export const ProductDetails = ({ data }) => {
   const { productName } = useParams();
@@ -96,8 +96,21 @@ export const ProductDetails = ({ data }) => {
             </header>
             <div className="detail-price">
               <span className="discount">-{product.discount}%</span>
-              <span className="price"><sup><LiaRupeeSignSolid /></sup>{product.price}</span>
-              <p>M.R.P: <span className="detail-mrp">{product.MRP()}</span></p>
+              <span className="price">
+                <sup>
+                  <LiaRupeeSignSolid />
+                </sup>
+                {product.price}
+              </span>
+              <p>
+                M.R.P: <span className="detail-mrp">{product.MRP()}</span>
+              </p>
+            </div>
+            <div className="detail-btns">
+              <button>Buy Now</button>
+              <button>
+                <Link to={`/cart`} >Add To Cart</Link>
+              </button>
             </div>
             <div className="features">
               <div className="feature">
@@ -126,75 +139,133 @@ export const ProductDetails = ({ data }) => {
               </div>
             </div>
             <div className="info">
-              {
-                product.brand ? (<>
-                  <span><strong>Brand: </strong>{product.brand}</span>
-                </>) : ""
-              }
-              {
-                product.modelName ? (<>
-                  <span><strong>Model Name: </strong>{product.modelName}</span>
-                </>) : ""
-              }
-              {
-                product.color ? (<>
-                  <span><strong>Color: </strong>{product.color}</span>
-                </>) : ""
-              }
-              {
-                product.OS ? (<>
-                  <span><strong>Operating System: </strong>{product.OS}</span>
-                </>) : ""
-              }
-              {
-                product.memory ? (<>
-                  <span><strong>Memory: </strong>{product.memory}</span>
-                </>) : ""
-              }
-              {
-                product.screenSize ? (<>
-                  <span><strong>Screen Size: </strong>{product.screenSize}</span>
-                </>) : ""
-              }
-              {
-                product.HDD ? (<>
-                  <span><strong>HDD: </strong>{product.HDD}</span>
-                </>) : ""
-              }
-              {
-                product.resolution ? (<>
-                  <span><strong>Resolution: </strong>{product.resolution}</span>
-                </>) : ""
-              }
-              {
-                product.RAM ? (<>
-                  <span><strong>RAM: </strong>{product.RAM}</span>
-                </>) : ""
-              }
-              {
-                product.CPU ? (<>
-                  <span><strong>CPU: </strong>{product.CPU}</span>
-                </>) : ""
-              }
-              {
-                product.specialFeature ? (<>
-                  <span><strong>Special Feature: </strong>{product.specialFeature}</span>
-                </>) : ""
-              }
-              {
-                product.connectivity ? (<>
-                  <span><strong>Connectivity: </strong>{product.connectivity}</span>
-                </>) : ""
-              }
+              {product.brand ? (
+                <>
+                  <span>
+                    <strong>Brand: </strong>
+                    {product.brand}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.modelName ? (
+                <>
+                  <span>
+                    <strong>Model Name: </strong>
+                    {product.modelName}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.color ? (
+                <>
+                  <span>
+                    <strong>Color: </strong>
+                    {product.color}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.OS ? (
+                <>
+                  <span>
+                    <strong>Operating System: </strong>
+                    {product.OS}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.memory ? (
+                <>
+                  <span>
+                    <strong>Memory: </strong>
+                    {product.memory}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.screenSize ? (
+                <>
+                  <span>
+                    <strong>Screen Size: </strong>
+                    {product.screenSize}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.HDD ? (
+                <>
+                  <span>
+                    <strong>HDD: </strong>
+                    {product.HDD}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.resolution ? (
+                <>
+                  <span>
+                    <strong>Resolution: </strong>
+                    {product.resolution}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.RAM ? (
+                <>
+                  <span>
+                    <strong>RAM: </strong>
+                    {product.RAM}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.CPU ? (
+                <>
+                  <span>
+                    <strong>CPU: </strong>
+                    {product.CPU}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.specialFeature ? (
+                <>
+                  <span>
+                    <strong>Special Feature: </strong>
+                    {product.specialFeature}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
+              {product.connectivity ? (
+                <>
+                  <span>
+                    <strong>Connectivity: </strong>
+                    {product.connectivity}
+                  </span>
+                </>
+              ) : (
+                ""
+              )}
             </div>
             <div className="about-product">
               <h2>About This Product</h2>
               <ul>
-                {
-                  product.aboutProduct.map((item, index) => {
-                    return <li key={index}>{item.about}</li>
-                  })
-                }
+                {product.aboutProduct.map((item, index) => {
+                  return <li key={index}>{item.about}</li>;
+                })}
               </ul>
             </div>
           </div>
