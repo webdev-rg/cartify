@@ -451,6 +451,12 @@
   .product-content .btns {
     justify-content: space-between;
   }
+  .image-container {
+    gap: 1rem;
+  }
+  .image-container .more-images {
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -470,6 +476,9 @@
     color: #101010;
   }
   .price .discount {
+    font-size: 1.4rem;
+  }
+  .feature h2 {
     font-size: 1.4rem;
   }
 }
