@@ -1,12 +1,11 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
-import { FaStarHalfAlt } from "react-icons/fa";
-import { FaRegStar } from "react-icons/fa";
+import "./SearchedProduct.css";
+import { Link } from "react-router-dom";
+import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 import { BsCart4 } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
-export const ProductCard = ({
+export const SearchedProductCard = ({
   image,
   title,
   rating,
