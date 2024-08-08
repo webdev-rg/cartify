@@ -17,7 +17,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Products items={data} setData={setData} />} />
-          <Route path="/productdetails/:productName" element={<ProductDetails />} />
+          <Route path="/productdetails/:productName" element={<ProductDetails data={data} />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/search/:term" element={<SearchedProduct />} />
         </Routes>

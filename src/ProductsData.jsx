@@ -237,7 +237,7 @@ export const ProductsData = [
   {
     id: 3,
     title:
-      "Vivo Y28s 5G (Twinkling Purple, 6GB RAM, 128GB Storage) with No Cost EMI/Additional Exchange Offers",
+      "Vivo Y28s 5G (Twinkling Purple, 6GB RAM, 128GB Storage) with No Cost EMI Additional Exchange Offers",
     category: "Mobiles",
     price: 15499,
     rating: 3.5,
@@ -482,7 +482,7 @@ export const ProductsData = [
   {
     id: 9,
     title:
-      "boAt Lunar Orb w/ 1.45' (3.6 cm) AMOLED Display, BT Calling, DIY Watch Face Studio, Coins, Crest App Health Ecosystem, Live Cricket & Football Scores, IP67, Smart Watch for Men & Women(Metal Black)",
+      "boAt Lunar Orb 1.45' (3.6 cm) AMOLED Display, BT Calling, DIY Watch Face Studio, Coins, Crest App Health Ecosystem, Live Cricket & Football Scores, IP67, Smart Watch for Men & Women(Metal Black)",
     category: "Watches",
     price: 1699,
     rating: 4,
@@ -642,7 +642,7 @@ export const ProductsData = [
   {
     id: 13,
     title:
-      "Lenovo Tab M10 Fhd 3Rd Gen|10.1 Inch (25.65 Cm) Wuxga IPS Display|100% Srgb|4 Gb Ram,64 Gb Rom|Octa-Core Processor|Wi-Fi|5100Mah Battery|Dual Speakers",
+      "Lenovo Tab M10 Fhd 3Rd Gen|10.1 Inch (25.65 Cm) Wuxga IPS Display|100 Srgb|4 Gb Ram,64 Gb Rom|Octa-Core Processor|Wi-Fi|5100Mah Battery|Dual Speakers",
     category: "Tabs",
     price: 9999,
     rating: 4.0,
@@ -688,7 +688,7 @@ export const ProductsData = [
   {
     id: 14,
     title:
-      "Apple iPad (10th generation): with A14 Bionic chip, 27.69 cm (10.9″) Liquid Retina display, 64GB, Wi-Fi 6, 12MP front/12MP back camera, Touch ID",
+      "Apple iPad (10th generation): with A14 Bionic chip, 27.69 cm (10.9″) Liquid Retina display, 64GB, Wi-Fi 6, 12MP front 12MP back camera, Touch ID",
     category: "Tabs",
     price: 30900,
     rating: 4.5,
@@ -765,7 +765,7 @@ export const ProductsData = [
   {
     id: 16,
     title:
-      "Lenovo IdeaPad Slim 3 13th Gen Intel Core i7-13620H 15' (38.1cm) FHD IPS 300 Nits Thin & Light Laptop (16GB/512GB SSD/Win 11/MSO 21/1Yr ADP Free/Alexa",
+      "Lenovo IdeaPad Slim 3 13th Gen Intel Core i7-13620H 15' (38.1cm) FHD IPS 300 Nits Thin & Light Laptop (16GB 512GB SSD Win 11 MSO 21 1Yr ADP Free Alexa",
     category: "Laptops",
     price: 59990,
     rating: 4.0,
@@ -860,7 +860,7 @@ export const ProductsData = [
   {
     id: 18,
     title:
-      "ASUS VivoBook 15 (2021) Thin and Light Laptop, Dual Core Intel Celeron N4020, 15.6-inch (39.62 cm) HD, (4GB RAM/256GB SSD/Integrated Graphics/Windows 11 Home",
+      "ASUS VivoBook 15 (2021) Thin and Light Laptop, Dual Core Intel Celeron N4020, 15.6-inch (39.62 cm) HD, (4GB RAM 256GB SSD Integrated Graphics Windows 11 Home",
     category: "Laptops",
     price: 19990,
     rating: 4.0,
@@ -908,7 +908,7 @@ export const ProductsData = [
   {
     id: 19,
     title:
-      "HONOR MagicBook X16 Pro 2024, 13th Gen Intel Core i5-13420H (16GB/512GB NVMe SSD, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light",
+      "HONOR MagicBook X16 Pro 2024, 13th Gen Intel Core i5-13420H (16GB 512GB NVMe SSD, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light",
     category: "Laptops",
     price: 51990,
     rating: 4.0,
@@ -947,7 +947,7 @@ export const ProductsData = [
   {
     id: 20,
     title:
-      "Acer Aspire Lite 12th Gen Intel Core i5-1235U Premium Laptop (16GB RAM/512GB SSD/Win11 Home&Student/Intel Graphics/MSO) AL15-52",
+      "Acer Aspire Lite 12th Gen Intel Core i5-1235U Premium Laptop (16GB RAM 512GB SSD Win11 Home&Student Intel Graphics MSO) AL15-52",
     category: "Laptops",
     price: 44990,
     rating: 4.0,
@@ -1105,7 +1105,7 @@ export const ProductsData = [
   {
     id: 24,
     title:
-      "Mistri Alloy Steel Office Table For Home/Writing Desk For Office/Folding Table For School/Folding Study Table",
+      "Mistri Alloy Steel Office Table For Home Writing Desk For Office Folding Table For School Folding Study Table",
     category: "Furniture",
     price: 399,
     rating: 4.0,
