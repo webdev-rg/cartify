@@ -1,30 +1,18 @@
 import React from "react";
-import "./SearchedProduct.css";
-import { Link } from "react-router-dom";
+import "./Cart.css"
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { LiaRupeeSignSolid } from "react-icons/lia";
-import { BsCart4 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-export const SearchedProductCard = ({
-  id,
-  image,
-  title,
-  rating,
-  mrp,
-  price,
-  discount,
-  brand,
-  modelName,
-  cartData,
-}) => {
+export const CartCard = ({title, price, discount, mrp, rating, brand, image}) => {
   return (
     <>
-      <div className="product-card">
+      <div className="cart-card">
         <div className="content">
-          <div className="product-image">
+          <div className="cart-image">
             <img src={image} alt="" />
           </div>
-          <div className="product-content">
+          <div className="cart-content">
             <div className="details">
               <Link to={`/productdetails/${title}`}>
                 <div className="title">
@@ -89,36 +77,7 @@ export const SearchedProductCard = ({
                 <h3>
                   <strong>Brand:</strong> {brand}
                 </h3>
-                {modelName ? (
-                  <>
-                    <h3>
-                      <strong>Model Name:</strong> {modelName}
-                    </h3>
-                  </>
-                ) : (
-                  ""
-                )}
               </div>
-            </div>
-            <div className="btns">
-              <button>Buy Now</button>
-              <button
-                onClick={() =>
-                  cartData(
-                    id,
-                    title,
-                    price,
-                    discount,
-                    mrp,
-                    rating,
-                    brand,
-                    image
-                  )
-                }
-              >
-                <BsCart4 />
-                Add To Cart
-              </button>
             </div>
           </div>
         </div>

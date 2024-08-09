@@ -5,7 +5,7 @@ import { SearchedProductCard } from "./SearchedProductCard";
 
 import "./SearchedProduct.css";
 
-export const SearchedProduct = () => {
+export const SearchedProduct = ({ cart, setCart }) => {
   const { term } = useParams();
   const [filterData, setFilterData] = useState([]);
 
@@ -20,6 +20,29 @@ export const SearchedProduct = () => {
     filteredData();
   }, [term]);
 
+  const handleAddToCart = (
+    id,
+    title,
+    price,
+    discount,
+    mrp,
+    rating,
+    brand,
+    image
+  ) => {
+    const cartData = {
+      id,
+      title,
+      price,
+      discount,
+      mrp,
+      rating,
+      brand,
+      image,
+    };
+    setCart([...cart, cartData]);
+  };
+
   return (
     <>
       <div className="product-container">
@@ -27,6 +50,7 @@ export const SearchedProduct = () => {
           return (
             <SearchedProductCard
               key={data.id}
+              id={data.id}
               image={data.mainImage}
               title={data.title}
               rating={data.rating}
@@ -35,6 +59,7 @@ export const SearchedProduct = () => {
               discount={data.discount}
               brand={data.brand}
               modelName={data.modelName}
+              cartData={handleAddToCart}
             />
           );
         })}

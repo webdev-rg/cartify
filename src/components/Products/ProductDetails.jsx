@@ -11,7 +11,7 @@ import { GoShieldCheck, GoTrophy } from "react-icons/go";
 
 import { Link, useParams } from "react-router-dom";
 
-export const ProductDetails = ({ data }) => {
+export const ProductDetails = ({ data, cart, setCart }) => {
   const { productName } = useParams();
   const [product, setProduct] = useState(null);
 
@@ -25,6 +25,29 @@ export const ProductDetails = ({ data }) => {
   if (!product) {
     return <div>Loading....</div>;
   }
+
+  const handleAddToCart = (
+    id,
+    title,
+    price,
+    discount,
+    mrp,
+    rating,
+    brand,
+    image
+  ) => {
+    const cartData = {
+      id,
+      title,
+      price,
+      discount,
+      mrp,
+      rating,
+      brand,
+      image,
+    };
+    setCart([...cart, cartData]);
+  };
 
   return (
     <>
@@ -108,8 +131,21 @@ export const ProductDetails = ({ data }) => {
             </div>
             <div className="detail-btns">
               <button>Buy Now</button>
-              <button>
-                <Link to={`/cart`} >Add To Cart</Link>
+              <button
+                onClick={() =>
+                  handleAddToCart(
+                    product.id,
+                    product.title,
+                    product.price,
+                    product.discount,
+                    product.mrp,
+                    product.rating,
+                    product.brand,
+                    product.mainImage
+                  )
+                }
+              >
+                Add To Cart
               </button>
             </div>
             <div className="features">

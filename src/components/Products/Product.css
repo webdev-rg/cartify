@@ -424,7 +424,7 @@
   .products-section {
     padding: 10rem 2rem;
   }
-  .content {
+  .product-card .content {
     flex-direction: column;
   }
   .content .product-image {

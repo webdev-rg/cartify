@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Product.css";
 
-import allProducts from "../../assets/images/all-products.png"
+import allProducts from "../../assets/images/all-products.png";
 import mobiles from "../../assets/images/mobiles.png";
 import watches from "../../assets/images/watches.png";
 import tabs from "../../assets/images/tabs.png";
@@ -10,7 +10,7 @@ import furniture from "../../assets/images/furniture.png";
 import tv from "../../assets/images/tv.png";
 import { ProductCard } from "./ProductCard";
 
-export const Products = ({ items, setData }) => {
+export const Products = ({ items, cart, setCart }) => {
   const [filteredItems, setFilteredItems] = useState(items);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -70,6 +70,29 @@ export const Products = ({ items, setData }) => {
     console.log(`Selected category: ${category}`);
   };
 
+  const handleAddToCart = (
+    id,
+    title,
+    price,
+    discount,
+    mrp,
+    rating,
+    brand,
+    image
+  ) => {
+    const cartData = {
+      id,
+      title,
+      price,
+      discount,
+      mrp,
+      rating,
+      brand,
+      image,
+    };
+    setCart([...cart, cartData]);
+  };
+
   return (
     <>
       <section className="products-section">
@@ -91,6 +114,7 @@ export const Products = ({ items, setData }) => {
             return (
               <ProductCard
                 key={data.id}
+                id={data.id}
                 image={data.mainImage}
                 title={data.title}
                 rating={data.rating}
@@ -99,6 +123,7 @@ export const Products = ({ items, setData }) => {
                 discount={data.discount}
                 brand={data.brand}
                 modelName={data.modelName}
+                cartData={handleAddToCart}
               />
             );
           })}

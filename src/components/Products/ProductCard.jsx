@@ -7,6 +7,7 @@ import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 export const ProductCard = ({
+  id,
   image,
   title,
   rating,
@@ -15,6 +16,7 @@ export const ProductCard = ({
   discount,
   brand,
   modelName,
+  cartData,
 }) => {
   return (
     <>
@@ -101,11 +103,22 @@ export const ProductCard = ({
             </div>
             <div className="btns">
               <button>Buy Now</button>
-              <button>
-                <Link>
-                  <BsCart4 />
-                  Add To Cart
-                </Link>
+              <button
+                onClick={() =>
+                  cartData(
+                    id,
+                    title,
+                    price,
+                    discount,
+                    mrp,
+                    rating,
+                    brand,
+                    image
+                  )
+                }
+              >
+                <BsCart4 />
+                Add To Cart
               </button>
             </div>
           </div>
