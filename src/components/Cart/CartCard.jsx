@@ -1,10 +1,18 @@
 import React from "react";
-import "./Cart.css"
+import "./Cart.css";
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
 
-export const CartCard = ({title, price, discount, mrp, rating, brand, image}) => {
+export const CartCard = ({
+  title,
+  price,
+  discount,
+  mrp,
+  rating,
+  brand,
+  image,
+}) => {
   return (
     <>
       <div className="cart-card">
