@@ -60,6 +60,7 @@ export const Header = () => {
             </label>
             <input
               type="text"
+              value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               name="search-product"
               id="search-product"

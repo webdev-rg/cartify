@@ -8,16 +8,16 @@ import "./SearchedProduct.css";
 export const SearchedProduct = ({ cart, setCart }) => {
   const { term } = useParams();
   const [filterData, setFilterData] = useState([]);
+  console.log(term);
 
   useEffect(() => {
-    const filteredData = () => {
-      const data = ProductsData.filter((data) =>
-        data.title.toLowerCase().includes(term.toLowerCase())
-      );
-
-      setFilterData(data);
-    };
-    filteredData();
+    console.log("Search term:", term); // Log term
+    console.log("ProductsData:", ProductsData); // Log entire dataset
+    const filteredData = ProductsData.filter((data) =>
+      data.title.toLowerCase().includes(term.toLowerCase())
+    );
+    console.log("Filtered Data:", filteredData); // Log filtered results
+    setFilterData(filteredData);
   }, [term]);
 
   const handleAddToCart = (
